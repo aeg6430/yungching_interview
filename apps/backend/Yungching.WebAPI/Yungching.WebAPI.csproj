@@ -21,4 +21,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Yungching.Application\Yungching.Application.csproj" />
+    <ProjectReference Include="..\Yungching.Infrastructure\Yungching.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

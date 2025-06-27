@@ -5,6 +5,12 @@ VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.WebAPI", "Yungching.WebAPI.csproj", "{98F377BA-A634-498D-B300-678CAD9758B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Infrastructure", "..\Yungching.Infrastructure\Yungching.Infrastructure.csproj", "{6AD3B150-C726-4A7E-990A-05E75CFE8EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Application", "..\Yungching.Application\Yungching.Application.csproj", "{EBB0A648-5192-4F11-89ED-AD732A191A91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Domain", "..\Yungching.Domain\Yungching.Domain.csproj", "{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{98F377BA-A634-498D-B300-678CAD9758B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98F377BA-A634-498D-B300-678CAD9758B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98F377BA-A634-498D-B300-678CAD9758B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD3B150-C726-4A7E-990A-05E75CFE8EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD3B150-C726-4A7E-990A-05E75CFE8EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD3B150-C726-4A7E-990A-05E75CFE8EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD3B150-C726-4A7E-990A-05E75CFE8EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB0A648-5192-4F11-89ED-AD732A191A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB0A648-5192-4F11-89ED-AD732A191A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB0A648-5192-4F11-89ED-AD732A191A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB0A648-5192-4F11-89ED-AD732A191A91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
