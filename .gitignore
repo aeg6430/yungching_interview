@@ -1,0 +1,62 @@
+# Global ignores
+*.class
+*.lock
+*.log
+*.pyc
+*.swp
+*.tmp
+*.DS_Store
+*.sw?
+
+# Common build/output folders
+build/
+dist/
+tmp/
+out/
+.cache/
+.idea/
+.vscode/
+
+# Env files
+!example.env  
+.env
+
+# -----------------------------
+# C# (apps/backend)
+# -----------------------------
+# Build results
+apps/backend/**/bin/
+apps/backend/**/obj/
+apps/backend/**/.vs/
+apps/backend/**/*.user
+apps/backend/**/*.suo
+apps/backend/**/*.userosscache
+apps/backend/**/*.sln.docstates
+apps/backend/**/publish_output
+# Rider
+apps/backend/**/.idea/
+
+# ASP.NET
+apps/backend/**/wwwroot/
+apps/backend/**/App_Data/
+apps/backend/**/App_Code/
+
+# NuGet
+apps/backend/**/packages/
+apps/backend/**/*.nupkg
+apps/backend/**/*.snupkg
+apps/backend/**/*.nuspec
+
+# Logs
+apps/backend/**/logs/
+
+# Publish outputs
+apps/backend/**/publish/
+apps/backend/**/*.Publish.xml
+
+# Secrets
+apps/backend/**/secrets.json
+apps/backend/**/appsettings.json
+apps/backend/**/appsettings.Development.json
+
+
