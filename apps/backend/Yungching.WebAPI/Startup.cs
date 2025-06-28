@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Text;
+using Yungching.Infrastructure.Contexts;
+using Yungching.Infrastructure;
 
 namespace Yungching.WebAPI
 {
@@ -15,6 +17,9 @@ namespace Yungching.WebAPI
         {
             services.AddHttpClient();
             services.AddHttpContextAccessor();
+            services.Configure<DatabaseSettings>(_configuration.GetSection("Database"));
+            services.AddSingleton(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
+            services.AddScoped<TransactionContext>();
             services.AddServices();
             services.AddControllers();
             services.AddEndpointsApiExplorer();

@@ -7,15 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Yungching.Domain\Yungching.Domain.csproj" />
-    <ProjectReference Include="..\Yungching.Infrastructure\Yungching.Infrastructure.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="IServices\" />
-    <Folder Include="Contracts\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Yungching.Domain\Yungching.Domain.csproj" />
+    <ProjectReference Include="..\Yungching.Infrastructure\Yungching.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
