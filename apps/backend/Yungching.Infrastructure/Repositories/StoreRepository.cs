@@ -54,14 +54,14 @@ namespace Yungching.Infrastructure.Repositories
                     latitude AS Latitude,  
                     longitude AS Longitude, 
                     address AS Address, 
-                    business_hours AS BusinessHours,
+                    business_hours AS BusinessHours
                 FROM store
-            WHERE s.store_id = ANY(@StoreIds)
+            WHERE store_id IN @StoreIds
             ";
 
             var parameters = new
             { 
-                StoreIds = storeIds.ToArray() 
+                StoreIds = storeIds
             };
             using (var connection = _context.CreateConnection())
             {
