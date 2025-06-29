@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.WebAPI", "Yungching.WebAPI.csproj", "{98F377BA-A634-498D-B300-678CAD9758B0}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Application", "..\Yungching.Application\Yungching.Application.csproj", "{EBB0A648-5192-4F11-89ED-AD732A191A91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Domain", "..\Yungching.Domain\Yungching.Domain.csproj", "{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yungching.Tests", "..\Yungching.Tests\Yungching.Tests.csproj", "{08983F87-8746-7371-EEED-34FCC9DFB898}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D3C68B-A84C-4D4D-BDF6-F0D456CE28DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08983F87-8746-7371-EEED-34FCC9DFB898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08983F87-8746-7371-EEED-34FCC9DFB898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08983F87-8746-7371-EEED-34FCC9DFB898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08983F87-8746-7371-EEED-34FCC9DFB898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
