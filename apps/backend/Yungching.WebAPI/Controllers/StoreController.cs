@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Yungching.Application.IServices;
 
 namespace Yungching.WebAPI.Controllers
 {
     [ApiController]
     [Route("stores")]
+    [Authorize]
     public class StoreController : ControllerBase
     {
         private readonly ILogger<StoreController> _logger;
