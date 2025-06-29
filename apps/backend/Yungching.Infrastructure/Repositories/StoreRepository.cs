@@ -16,11 +16,11 @@ namespace Yungching.Infrastructure.Repositories
     public class StoreRepository : IStoreRepository
     {
         private readonly ILogger<StoreRepository> _logger;
-        private readonly DapperContext _context;
+        private readonly TransactionContext _context;
 
         public StoreRepository(
             ILogger<StoreRepository> logger,
-            DapperContext context
+            TransactionContext context
         )
         {
             _logger = logger;

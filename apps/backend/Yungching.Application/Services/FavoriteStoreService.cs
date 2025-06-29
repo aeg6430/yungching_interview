@@ -15,14 +15,14 @@ namespace Yungching.Application.Services
 {
     public class FavoriteStoreService : IFavoriteStoreService
     {
-        private readonly DapperContext _context;
+        private readonly TransactionContext _context;
         private readonly ILogger<FavoriteStoreService> _logger;
         private readonly IFavoriteStoreRepository _favoriteStoreRepository;
         private readonly IStoreRepository _storeRepository;
         
         public FavoriteStoreService(
-            DapperContext context,
-           ILogger<FavoriteStoreService> logger,
+            TransactionContext context,
+            ILogger<FavoriteStoreService> logger,
             IFavoriteStoreRepository favoriteStoreRepository,
             IStoreRepository storeRepository
          )

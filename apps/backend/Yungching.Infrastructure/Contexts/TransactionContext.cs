@@ -14,9 +14,10 @@ namespace Yungching.Infrastructure.Contexts
         private readonly DatabaseSettings _settings;
         private readonly ILogger<TransactionContext>? _logger;
 
-        public IDbConnection Connection { get; private set; }
-        public IDbTransaction Transaction { get; private set; }
+        public virtual IDbConnection Connection { get; protected set; }
+        public virtual IDbTransaction Transaction { get; protected set; }
 
+        protected TransactionContext() { }
         public TransactionContext(
             DatabaseSettings settings, 
             ILogger<TransactionContext>? logger = null

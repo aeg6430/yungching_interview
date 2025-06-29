@@ -13,13 +13,13 @@ namespace Yungching.Application.Auth
 {
     public class UserService : IUserService
     {
-        private readonly DapperContext _context;
+        private readonly TransactionContext _context;
         private readonly IUserRepository _userRepository;
         private readonly ILogger<UserService> _logger;
         private readonly IJwtTokenService _jwtTokenService;
 
         public UserService(
-            DapperContext context,
+            TransactionContext context,
             IUserRepository userRepository,
             ILogger<UserService> logger,
             IJwtTokenService jwtTokenService

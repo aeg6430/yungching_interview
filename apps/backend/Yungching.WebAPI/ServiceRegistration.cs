@@ -11,7 +11,8 @@ namespace Yungching.WebAPI
     {
         public static void AddServices(this IServiceCollection services)
         {
-            services.AddScoped<DapperContext>();
+            services.AddScoped<TransactionContext, DapperContext>();
+
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
 

@@ -15,11 +15,11 @@ namespace Yungching.Infrastructure.Repositories
     public class FavoriteStoreRepository : IFavoriteStoreRepository
     {
         private readonly ILogger<FavoriteStoreRepository> _logger;
-        private readonly DapperContext _context;
+        private readonly TransactionContext _context;
 
         public FavoriteStoreRepository(
             ILogger<FavoriteStoreRepository> logger,
-            DapperContext context
+            TransactionContext context
         )
         {
             _logger = logger;

@@ -12,12 +12,12 @@ namespace Yungching.Application.Services
 {
     public  class StoreService : IStoreService
     {
-        private readonly DapperContext _context;
+        private readonly TransactionContext _context;
         private readonly ILogger<StoreService> _logger;
         private readonly IStoreRepository _storeRepository;
 
         public StoreService(
-            DapperContext context,
+            TransactionContext context,
             ILogger<StoreService> logger,
             IStoreRepository storeRepository
          )
