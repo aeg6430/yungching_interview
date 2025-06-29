@@ -1,4 +1,5 @@
-﻿using Yungching.Application.IServices;
+﻿using Yungching.Application.Auth;
+using Yungching.Application.IServices;
 using Yungching.Application.Services;
 using Yungching.Infrastructure.Contexts;
 using Yungching.Infrastructure.IRepositories;
@@ -11,6 +12,9 @@ namespace Yungching.WebAPI
         public static void AddServices(this IServiceCollection services)
         {
             services.AddScoped<DapperContext>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddScoped<IStoreRepository, StoreRepository>();
             services.AddScoped<IStoreService, StoreService>();
         }

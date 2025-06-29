@@ -2,6 +2,9 @@
 using System.Text;
 using Yungching.Infrastructure.Contexts;
 using Yungching.Infrastructure;
+using Yungching.Application.Jwt;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Yungching.WebAPI
 {
@@ -17,6 +20,33 @@ namespace Yungching.WebAPI
         {
             services.AddHttpClient();
             services.AddHttpContextAccessor();
+
+            var jwtConfig = _configuration.GetSection("Jwt").Get<JwtConfig>();
+            services.AddSingleton(jwtConfig);
+            services.AddScoped<IJwtTokenService, JwtTokenGenerator>();
+            var key = Encoding.UTF8.GetBytes(jwtConfig.Key);
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+
+                    ValidIssuer = jwtConfig.Issuer,
+                    ValidAudience = jwtConfig.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
+
+
             services.Configure<DatabaseSettings>(_configuration.GetSection("Database"));
             services.AddSingleton(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
             services.AddScoped<TransactionContext>();
