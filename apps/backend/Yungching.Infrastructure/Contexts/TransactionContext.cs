@@ -72,23 +72,23 @@ namespace Yungching.Infrastructure.Contexts
             }
         }
 
-        public void Begin()
+        public virtual void Begin()
         {
             OpenConnectionAsync();
             BeginTransaction();
         }
 
-        public void Commit()
+        public virtual void Commit()
         {
             CommitTransaction();
         }
 
-        public void Rollback()
+        public virtual void Rollback()
         {
             RollbackTransaction();
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             CloseConnection();
         }
