@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
 using System.Text;
-using Yungching.Infrastructure.Contexts;
 using Yungching.Infrastructure;
 using Yungching.Application.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -49,7 +48,6 @@ namespace Yungching.WebAPI
 
             services.Configure<DatabaseSettings>(_configuration.GetSection("Database"));
             services.AddSingleton(sp => sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
-            services.AddScoped<TransactionContext>();
             services.AddServices();
             services.AddControllers();
             services.AddEndpointsApiExplorer();
