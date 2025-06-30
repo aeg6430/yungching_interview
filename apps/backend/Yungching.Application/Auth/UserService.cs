@@ -110,6 +110,7 @@ namespace Yungching.Application.Auth
                 if (existingEntity == null)
                 {
                     _logger.LogWarning("Update failed: User not found {UserId}", updatedUser.UserId);
+                    _context.Rollback();
                     return null;
                 }
 
